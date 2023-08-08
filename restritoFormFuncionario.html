@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Bem Viver</title>
+    <meta name="description" content="Descrição da Clínica....">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header class="listaMenu">
+        <div class="row g-3">
+            <div class="col-sm-4">
+                <img src="images/logo_clinica.png" alt="Logomarca da Clínica" width="45" height="45">
+            </div>
+            <div class="col-sm-4">
+                <h2>Clínica Bem Viver</h2>
+            </div>
+        </div>
+    </header>  
+    <!-- <nav>
+        <ul class="listaMenuInterno palavrasMenuInterno"> 
+            <li><a href="restritoPrincipal.php">Principal</a></li> 
+            <li><a href="restritoFormFuncionario.html">Novo Funcionário</a></li> 
+            <li><a href="restritoFormPaciente.html">Novo Paciente</a></li>
+            <li><a href="restritoListaFuncionarios.php">Listar Funcionários</a></li>
+            <li><a href="restritoListaPacientes.php">Listar Pacientes</a></li>
+            <li><a href="restritoListaBaseEnderecos.php">Listar Endereços</a></li>
+            <li><a href="#">Listar todos Agendamentos</a></li>
+            <li><a href="#">Listar meus Agendamentos</a></li>
+        </ul>
+    </nav> -->
+    <div class="container">
+        <main>
+            <form action="restritoCadastraFuncionario.php" name="formCadastroFuncionario" method="POST">
+                <fieldset>
+                    <legend><h2>Formulário Funcionário</h2></legend>
+
+                    <div class="row g-3">
+                        <div class="col-sm-12">
+                            <label>Escolha a Função do Funcionário que será Cadastrado:</label>
+                            <select class="form-select form-select-sm" name="funcaoFuncionario" id="funcaoFuncionario">
+                                <option value="Selecione" selected>Selecione</option>
+                                <option value="funcionarioNormal">Funcionário Normal</option>
+                                <option value="funcionarioMedico">Funcionário Médico</option>
+                            </select>
+                            <span></span>
+                        </div>
+                        <div class="col-sm-8">
+                            <label for="nome" class="form-label form-label-sm">Nome</label>
+                            <input type="text" class="form-control form-control-sm" id="nome" name="nome">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="sexo" class="form-label form-label-sm">Sexo</label>
+                            <input type="text" class="form-control form-control-sm" id="sexo" name="sexo">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-8">
+                            <label for="email" class="form-label form-label-sm">E-mail</label>
+                            <input type="email" class="form-control form-control-sm" id="email" name="email">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="telefone" class="form-label form-label-sm">Telefone</label>
+                            <input type="tel" class="form-control form-control-sm" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cep" class="form-label form-label-sm">CEP no formato xxxxx-xxx (Ex:38400-100)</label>
+                            <input type="text" class="form-control form-control-sm" id="cep" name="cep">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-8">
+                            <label for="logradouro" class="form-label form-label-sm">Logradouro</label>
+                            <input type="text" class="form-control form-control-sm" id="logradouro" name="logradouro">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-8">
+                            <label for="cidade" class="form-label form-label-sm">Cidade</label>
+                            <input type="text" class="form-control form-control-sm" id="cidade" name="cidade">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="estado" class="form-label form-label-sm">Estado</label>
+                            <select class="form-select form-select-sm" name="estado" id="estado">
+                                <option value="Selecione" selected>Selecione</option>
+                                <option value="ACRE">AC</option>
+                                <option value="ALAGOAS">AL</option>
+                                <option value="AMAPA">AP</option>
+                                <option value="AMAZONAS">AM</option>
+                                <option value="BAHIA">BA</option>
+                                <option value="CEARA">CE</option>
+                                <option value="DISTRITO FEDERAL">DF</option>
+                                <option value="ESPIRITO SANTO">ES</option>
+                                <option value="GOIAS">GO</option>
+                                <option value="MARANHAO">MA</option>
+                                <option value="MATO GROSSO">MT</option>
+                                <option value="MATO GROSSO DO SUL">MS</option>
+                                <option value="MINAS GERAIS">MG</option>
+                                <option value="PARA">PA</option>
+                                <option value="PARAIBA">PB</option>
+                                <option value="PARANA">PR</option>
+                                <option value="PERNAMBUCO">PE</option>
+                                <option value="PIAUI">PI</option>
+                                <option value="RIO DE JANEIRO">RJ</option>
+                                <option value="RIO GRANDE DO NORTE">RN</option>
+                                <option value="RIO GRANDE DO SUL">RS</option>
+                                <option value="RONDONIA">RO</option>
+                                <option value="RORAIMA">RR</option>
+                                <option value="SANTA CATARINA">SC</option>
+                                <option value="SAO PAULO">SP</option>
+                                <option value="SERGIPE">SE</option>
+                                <option value="TOCANTINS">TO</option>
+                            </select>
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="dataContrato" class="form-label form-label-sm">Data do Contrato</label>
+                            <input type="date" class="form-control form-control-sm" id="dataContrato" name="dataContrato">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="salario" class="form-label form-label-sm">Salário</label>
+                            <input type="text" class="form-control form-control-sm" id="salario" name="salario">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="senha" class="form-label form-label-sm">Senha</label>
+                            <input type="password" class="form-control form-control-sm" id="senha" name="senha">
+                            <span></span>
+                        </div>
+                        <div id="divEspecialidade" class="col-sm-6">
+                            <label for="especialidade" class="form-label form-label-sm">Especialidade</label>
+                            <input type="text" class="form-control form-control-sm" id="especialidade" name="especialidade">
+                            <span></span>
+                        </div>
+                        <div id="divCRM" class="col-sm-6">
+                            <label for="crm" class="form-label form-label-sm">CRM</label>
+                            <input type="text" class="form-control form-control-sm" id="crm" name="crm">
+                            <span></span>
+                        </div>
+                </fieldset>
+                <div class="col-sm-12 divButton">
+                    <button type="submit" class="btn btn-dark">Cadastrar Funcionário</button>
+                </div>
+            </form>
+            <div class="centralizaTexto btnInterno">
+                <a href="restritoPrincipal.php">Voltar para Página Principal</a>
+            </div>
+        </main>
+
+        <script>
+
+            window.onload = function () {
+                document.forms.formCadastroFuncionario.onsubmit = validaForm;
+            
+                // Parte da pagina referente ao tipo de Funcionario que irá ser cadastrado
+                const funcaoFuncionario = document.querySelector("#funcaoFuncionario");
+                funcaoFuncionario.onchange = () => verificaFuncionario(funcaoFuncionario.value);
+
+                const divEspecialidade = document.querySelector("#divEspecialidade");
+                const divCRM = document.querySelector("#divCRM");
+
+                divEspecialidade.style.display = 'none';
+                divCRM.style.display = 'none';
+
+                // Parte da pagina responsavel por buscar o endereço na tabela base de endereços
+                const inputCep = document.querySelector("#cep");
+                inputCep.onkeyup = () => buscaEndereco(inputCep.value);
+            }
+
+            
+            function verificaFuncionario(funcaoFuncionario){
+                if (funcaoFuncionario === "funcionarioNormal"){
+                    divEspecialidade.style.display = 'none';
+                    divCRM.style.display = 'none';
+                }
+
+                if (funcaoFuncionario === "funcionarioMedico"){
+                    divEspecialidade.style.display = 'block';
+                    divCRM.style.display = 'block';
+                }
+            }
+
+
+            function buscaEndereco(cep) {
+                if (cep.length != 9) return;
+
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "buscaEndereco.php?cep=" + cep, true);
+
+                xhr.onload = function () {
+                    
+                    // verifica o código de status retornado pelo servidor
+                    if (xhr.status != 200) {
+                        console.error("Falha inesperada: " + xhr.responseText);
+                        return;
+                    }
+
+                    // converte a string JSON para objeto JavaScript
+                    try {
+                        var endereco = JSON.parse(xhr.responseText);
+                    }
+                    catch (e) {
+                        console.error("String JSON inválida: " + xhr.responseText);
+                        return;
+                    }
+
+                    // utiliza os dados retornados para preencher formulário
+                    let form = document.querySelector("form");
+                    form.logradouro.value = endereco.logradouro;
+                    form.cidade.value = endereco.cidade;
+                    form.estado.value = endereco.estado;
+                }
+
+                xhr.onerror = function () {
+                    console.error("Erro de rede - requisição não finalizada");
+                };
+
+                xhr.send();
+            }
+
+
+            function validaForm (e) {
+                let form = e.target;
+                let formValido = true;
+
+                const spanfuncaoFuncionario = form.funcaoFuncionario.nextElementSibling;
+
+                spanfuncaoFuncionario.textContent = "";
+
+                if (form.funcaoFuncionario.value === "Selecione") {
+                    spanfuncaoFuncionario.textContent = 'A função do funcionário deve ser selecionada';
+                    formValido = false;
+                }
+
+                if (form.funcaoFuncionario.value === "funcionarioNormal") {
+
+                    const spanNome = form.nome.nextElementSibling;
+                    const spanSexo = form.sexo.nextElementSibling;
+                    const spanEmail = form.email.nextElementSibling;
+                    const spanTelefone = form.telefone.nextElementSibling;
+                    const spanCep = form.cep.nextElementSibling;
+                    const spanLogradouro = form.logradouro.nextElementSibling;
+                    const spanCidade = form.cidade.nextElementSibling;
+                    const spanEstado = form.estado.nextElementSibling;
+                    const spanDataContrato = form.dataContrato.nextElementSibling;
+                    const spanSalario = form.salario.nextElementSibling;
+                    const spanSenha = form.senha.nextElementSibling;
+                    
+                    spanNome.textContent = "";
+                    spanSexo.textContent = "";
+                    spanEmail.textContent = "";
+                    spanTelefone.textContent = "";
+                    spanCep.textContent = "";
+                    spanLogradouro.textContent = "";
+                    spanCidade.textContent = "";
+                    spanEstado.textContent = "";
+                    spanDataContrato.textContent = "";
+                    spanSalario.textContent = "";
+                    spanSenha.textContent = "";
+                    
+                    if (form.nome.value === "") {
+                        spanNome.textContent = 'O nome deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.sexo.value === "") {
+                        spanSexo.textContent = 'O sexo deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.email.value === "") {
+                        spanEmail.textContent = 'O e-mail deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.telefone.value === "") {
+                        spanTelefone.textContent = 'O telefone deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.cep.value === "") {
+                        spanCep.textContent = 'O CEP deve ser preenchido';
+                        formValido = false;
+                    }
+        
+                    if (form.logradouro.value === "") {
+                        spanLogradouro.textContent = 'O logradouro deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.cidade.value === "") {
+                        spanCidade.textContent = 'A cidade deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.estado.value === "Selecione") {
+                        spanEstado.textContent = 'O estado deve ser selecionado';
+                        formValido = false;
+                    }
+
+                    if (form.dataContrato.value === "") {
+                        spanDataContrato.textContent = 'A data do contrato deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.salario.value === "") {
+                        spanSalario.textContent = 'O salario deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.senha.value === "") {
+                        spanSenha.textContent = 'A senha deve ser preenchida';
+                        formValido = false;
+                    }
+                }
+
+                else if (form.funcaoFuncionario.value === "funcionarioMedico") {
+
+                    const spanNome = form.nome.nextElementSibling;
+                    const spanSexo = form.sexo.nextElementSibling;
+                    const spanEmail = form.email.nextElementSibling;
+                    const spanTelefone = form.telefone.nextElementSibling;
+                    const spanCep = form.cep.nextElementSibling;
+                    const spanLogradouro = form.logradouro.nextElementSibling;
+                    const spanCidade = form.cidade.nextElementSibling;
+                    const spanEstado = form.estado.nextElementSibling;
+                    const spanDataContrato = form.dataContrato.nextElementSibling;
+                    const spanSalario = form.salario.nextElementSibling;
+                    const spanSenha = form.senha.nextElementSibling;
+                    const spanEspecialidade = form.especialidade.nextElementSibling;
+                    const spanCrm = form.crm.nextElementSibling;
+                    
+                    spanNome.textContent = "";
+                    spanSexo.textContent = "";
+                    spanEmail.textContent = "";
+                    spanTelefone.textContent = "";
+                    spanCep.textContent = "";
+                    spanLogradouro.textContent = "";
+                    spanCidade.textContent = "";
+                    spanEstado.textContent = "";
+                    spanDataContrato.textContent = "";
+                    spanSalario.textContent = "";
+                    spanSenha.textContent = "";
+                    spanEspecialidade.textContent = "";
+                    spanCrm.textContent = "";
+
+                    if (form.nome.value === "") {
+                        spanNome.textContent = 'O nome deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.sexo.value === "") {
+                        spanSexo.textContent = 'O sexo deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.email.value === "") {
+                        spanEmail.textContent = 'O e-mail deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.telefone.value === "") {
+                        spanTelefone.textContent = 'O telefone deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.cep.value === "") {
+                        spanCep.textContent = 'O CEP deve ser preenchido';
+                        formValido = false;
+                    }
+        
+                    if (form.logradouro.value === "") {
+                        spanLogradouro.textContent = 'O logradouro deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.cidade.value === "") {
+                        spanCidade.textContent = 'A cidade deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.estado.value === "Selecione") {
+                        spanEstado.textContent = 'O estado deve ser selecionado';
+                        formValido = false;
+                    }
+
+                    if (form.dataContrato.value === "") {
+                        spanDataContrato.textContent = 'A data do contrato deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.salario.value === "") {
+                        spanSalario.textContent = 'O salario deve ser preenchido';
+                        formValido = false;
+                    }
+
+                    if (form.senha.value === "") {
+                        spanSenha.textContent = 'A senha deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.especialidade.value === "") {
+                        spanEspecialidade.textContent = 'A especialidade deve ser preenchida';
+                        formValido = false;
+                    }
+
+                    if (form.crm.value === "") {
+                        spanCrm.textContent = 'O CRM deve ser preenchido';
+                        formValido = false;
+                    }
+                }
+                
+                return formValido;
+            }
+            
+        </script>
+
+
+    </div>
+    <footer>
+        <p>© Copyright 2021. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
