@@ -47,7 +47,7 @@ SQL;
     </header>  
     <nav>
         <ul class="listaMenu palavrasMenu"> 
-            <li><a href="index.html">Home</a></li> 
+            <li><a href="../index.html">Home</a></li> 
             <li><a href="galeria.html">Galeria</a></li>
             <li><a href="formNovoEndereco.html">Novo Endereço</a></li>
             <li><a href="#">Agendar Consulta</a></li>
