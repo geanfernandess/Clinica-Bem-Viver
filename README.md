@@ -1,6 +1,6 @@
 ## Clínica Bem Viver
 
-O objetivo é criar um website funcional para uma clínica médica, organizado em duas partes: uma voltada para a equipe interna da clínica e outra para o público em geral.
+Website funcional para uma clínica médica, organizado em duas partes: uma voltada para a equipe interna da clínica e outra para o público em geral.
 
 O sistema de agendamento de consulta oferece uma experiência em tempo real, permitindo que os pacientes selecionem especialidades médicas disponíveis e horários de médicos de forma dinâmica. 
 
@@ -26,7 +26,7 @@ Você pode acessar o site através do link: http://geanfernandes.atwebpages.com/
 - Listar Todos Agendamentos;
 - Listar Meus Agendamentos;
 
-### Tecnologias Utilizadas
+### Tecnologias 
 - HTML
 - CSS
 - JavaScript
